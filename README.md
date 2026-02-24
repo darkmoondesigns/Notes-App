@@ -1,28 +1,27 @@
-# Notes App (HTML/CSS/JS – ohne Python, ohne PowerShell)
+# Meeting Notes Board (HTML / CSS / JS)
 
-Diese App läuft als **statische Web-App** und ist damit für stark eingeschränkte Umgebungen geeignet, in denen Skripte per Gruppenrichtlinie blockiert werden.
+Eine statische Notizen-App für gesperrte Umgebungen (kein Python, keine PowerShell, kein Build-Tool).
 
 ## Start
 
-Einfach `index.html` im Browser öffnen (Doppelklick).
+`index.html` per Doppelklick im Browser öffnen.
 
-Keine Installation, kein Server, kein Python/PowerShell nötig.
+## Funktionsumfang
 
-## Features
-
-- Themen anlegen
-- Meetings innerhalb eines Themas
-- Notizen pro Thema/Meeting
-- Todos wie Notizen (inkl. `Done`-Status)
-- Lokale Speicherung im Browser (`localStorage`)
-- JSON Export/Import zur Sicherung
+- Themen anlegen/löschen
+- Meetings pro Thema anlegen/löschen
+- Notizen und Todos anlegen, bearbeiten, löschen
+- Todo-Status zwischen `Open` und `Done` umschalten
+- Suche + Filter (Alle / Notizen / Todos)
+- Lokale Speicherung in `localStorage`
+- Backup via JSON Export / Import
 
 ## Dateien
 
-- `index.html` – Struktur/UI
-- `styles.css` – Styling
-- `app.js` – Logik + Speicherung
+- `index.html` – Struktur und Dialoge
+- `styles.css` – Layout und Design
+- `app.js` – komplette App-Logik
 
 ## Hinweis
 
-Da alles lokal im Browser läuft, bleiben die Daten pro Browserprofil erhalten. Für Backup bitte regelmäßig den **Export JSON** verwenden.
+Die Daten bleiben lokal im Browserprofil. Für Gerätewechsel regelmäßig JSON exportieren.

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Notes App</h1>
+      <p>Themen → Meetings → Notizen / Todos (läuft lokal im Browser)</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Themen</h2>
+        <form id="topic-form" class="inline-form">
+          <input id="topic-name" type="text" placeholder="Neues Thema" required />
+          <button type="submit">+</button>
+        </form>
+        <ul id="topic-list" class="list"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Meetings</h2>
+        <form id="meeting-form" class="inline-form">
+          <input id="meeting-title" type="text" placeholder="Meeting-Titel" required />
+          <input id="meeting-date" type="date" />
+          <button type="submit">+</button>
+        </form>
+        <ul id="meeting-list" class="list"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Eintrag erstellen</h2>
+        <form id="entry-form" class="stack-form">
+          <div class="row">
+            <label><input type="radio" name="entry-type" value="NOTE" checked /> Notiz</label>
+            <label><input type="radio" name="entry-type" value="TODO" /> Todo</label>
+          </div>
+          <input id="entry-title" type="text" placeholder="Titel" required />
+          <textarea id="entry-body" rows="5" placeholder="Text"></textarea>
+          <button type="submit">Speichern</button>
+        </form>
+
+        <h3>Einträge</h3>
+        <div id="entries"></div>
+      </section>
+    </main>
+
+    <footer>
+      <button id="export-btn">Export JSON</button>
+      <label class="import-label">
+        Import JSON
+        <input id="import-input" type="file" accept="application/json" />
+      </label>
+      <button id="clear-btn" class="danger">Alles löschen</button>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
